@@ -19,7 +19,8 @@ echo "made by aquiline nodes"
 echo "for java type 1 for bedrock type 2"
 read TYPE2
 export TYPE2
-if [ $TYPE2 = 1 ]; then
+case $TYPE2 in
+1)
 echo "choose ur type"
 echo "1-paper"
 echo "2-purpur"
@@ -49,6 +50,8 @@ PROJECT = purpur
      echo "$PROJECT being installed"
    ;;
    esac
-else
+   ;;
+2)
 echo "bedrock being installed"
-fi
+;;
+esac
