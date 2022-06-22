@@ -19,7 +19,7 @@ echo "made by aquiline nodes"
 echo "for java type 1 for bedrock type 2"
 read TYPE2
 export TYPE2
-if [ $TYPE2 -eq 1 ]; then
+if [ $TYPE2 = 1 ]; then
 echo "choose ur type"
 echo "1-paper"
 echo "2-purpur"
