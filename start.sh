@@ -43,6 +43,9 @@ PROJECT = purpur
    echo "u choose vanilla"
    PROJECT = vanilla
      echo "$PROJECT being installed"
+     echo "enter the vanilla version"
+     read VANILLA_VERSION 
+     MANIFEST_URL=$(curl -sSL https://launchermeta.mojang.com/mc/game/version_manifest.json | jq --arg VERSION $VANILLA_VERSION -r '.versions | .[] | select(.id== $VERSION )|.url')
    ;;
    4)
    echo "u choose bungeecord"
